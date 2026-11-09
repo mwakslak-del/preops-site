@@ -18,6 +18,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
@@ -218,6 +219,17 @@ ul { margin: 0; }
 .form-grid .col-copy p { font-size: 17px; max-width: 420px; }
 .form-slot { background: var(--paper); border: 1px solid var(--rule); border-top: 4px solid var(--green); border-radius: 14px; padding: 12px; }
 .form-slot iframe { display: block; width: 100%; border: 0; }
+.form-launcher { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 36px 22px; text-align: center; }
+.form-launcher p { margin: 0; font-size: 17px; max-width: 380px; }
+.form-launcher .small { font-size: 14px; color: #4a5160; }
+.form-launcher .btn { width: min(100%, 360px); }
+.form-mount { position: relative; padding-top: 34px; }
+.form-close {
+  position: absolute; top: 2px; right: 6px;
+  background: none; border: 0; padding: 6px 8px; cursor: pointer;
+  font: inherit; font-size: 14px; color: var(--navy); text-decoration: underline;
+}
+.form-close:hover { color: var(--green); }
 @media (max-width: 900px) { .form-grid { grid-template-columns: 1fr; gap: 28px; } }
 @media (max-width: 480px) { .way { grid-template-columns: 1fr; } .way .note { grid-column: 1; } .refer { padding: 22px; } }
 

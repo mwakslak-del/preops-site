@@ -32,6 +32,12 @@
       "telephone": "+1-818-724-8200",
       "faxNumber": "+1-818-724-8300",
       "email": "referrals@preops.com",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
       "image": "https://www.preops.com/favicon.svg",
       "address": {
         "@type": "PostalAddress",
@@ -227,7 +233,16 @@
         <p class="small">This form is HIPAA-compliant and encrypted. We call the patient to schedule; you'll get the clearance letter, consult, and any test reports by fax.</p>
         <p class="small">Prefer paper? <a href="referral-form.pdf"><strong>Download the referral form (PDF)</strong></a> and fax it.</p>
       </div>
-      <div class="form-slot" aria-live="polite"></div>
+      <div class="form-slot">
+        <div class="form-launcher">
+          <p>The secure form opens right here. It takes about two minutes.</p>
+          <button type="button" class="btn btn--green form-open" aria-expanded="false" aria-controls="form-mount">Open the Secure Referral Form</button>
+          <p class="small">HIPAA-compliant and encrypted.</p>
+        </div>
+        <div class="form-mount" id="form-mount" hidden>
+          <button type="button" class="form-close">Hide form</button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -370,7 +385,7 @@
       <div>
         <div class="foot-label">Visit</div>
         <div>18372 Clark Street, Suite 216<br>Tarzana, CA 91356</div>
-        <div>Hours: [HOURS]</div>
+        <div>Hours: Monday–Friday, 9:00 AM–5:00 PM</div>
       </div>
       <div>
         <div class="foot-label">Contact</div>
@@ -388,7 +403,8 @@
 </footer>
 
 <script>
-  // Online referral form: mounts the JotForm HIPAA form when a form ID is configured.
+  // Online referral form: shows the section when a form ID is configured.
+  // The form itself stays collapsed until someone opens it; the JotForm iframe is created on first open.
   (function () {
     var section = document.getElementById('refer-form');
     if (!section) return;
@@ -396,26 +412,63 @@
     if (!/^\d{6,}$/.test(id)) return;
     var base = 'https://hipaa.jotform.com/';
     var slot = section.querySelector('.form-slot');
-    var f = document.createElement('iframe');
-    f.id = 'JotFormIFrame-' + id;
-    f.title = 'Secure online referral form';
-    f.src = base + id;
-    f.setAttribute('allow', 'geolocation; microphone; camera; fullscreen');
-    f.setAttribute('allowtransparency', 'true');
-    f.setAttribute('scrolling', 'no');
-    f.setAttribute('frameborder', '0');
-    f.style.cssText = 'min-width:100%;max-width:100%;height:900px;border:none;';
-    slot.appendChild(f);
+    var launcher = slot.querySelector('.form-launcher');
+    var mount = slot.querySelector('.form-mount');
+    var openBtn = slot.querySelector('.form-open');
+    var closeBtn = slot.querySelector('.form-close');
+    var heroBtn = document.querySelector('.refer-online');
+    var loaded = false;
+
     section.hidden = false;
-    var btn = document.querySelector('.refer-online');
-    if (btn) btn.hidden = false;
-    // JotForm's embed handler resizes the iframe to the form's height.
-    var s = document.createElement('script');
-    s.src = 'https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js';
-    s.onload = function () {
-      if (window.jotformEmbedHandler) window.jotformEmbedHandler("iframe[id='JotFormIFrame-" + id + "']", base);
-    };
-    document.body.appendChild(s);
+    if (heroBtn) heroBtn.hidden = false;
+
+    function load() {
+      if (loaded) return;
+      loaded = true;
+      var f = document.createElement('iframe');
+      f.id = 'JotFormIFrame-' + id;
+      f.title = 'Secure online referral form';
+      f.src = base + id;
+      f.setAttribute('allow', 'geolocation; microphone; camera; fullscreen');
+      f.setAttribute('allowtransparency', 'true');
+      f.setAttribute('scrolling', 'no');
+      f.setAttribute('frameborder', '0');
+      f.style.cssText = 'min-width:100%;max-width:100%;height:900px;border:none;';
+      mount.appendChild(f);
+      // JotForm's embed handler resizes the iframe to the form's height.
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js';
+      s.onload = function () {
+        if (window.jotformEmbedHandler) window.jotformEmbedHandler("iframe[id='JotFormIFrame-" + id + "']", base);
+      };
+      document.body.appendChild(s);
+    }
+    function open(scroll) {
+      load();
+      launcher.hidden = true;
+      mount.hidden = false;
+      openBtn.setAttribute('aria-expanded', 'true');
+      if (scroll) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    function close() {
+      mount.hidden = true;
+      launcher.hidden = false;
+      openBtn.setAttribute('aria-expanded', 'false');
+      openBtn.focus();
+    }
+
+    openBtn.addEventListener('click', function () { open(false); });
+    closeBtn.addEventListener('click', close);
+    if (heroBtn) {
+      heroBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        open(true);
+        if (history.replaceState) history.replaceState(null, '', '#refer-form');
+      });
+    }
+    // Direct links to #refer-form (for example from the About page) open the form.
+    if (location.hash === '#refer-form') open(false);
+    window.addEventListener('hashchange', function () { if (location.hash === '#refer-form') open(false); });
   })();
 </script>
 </body>
