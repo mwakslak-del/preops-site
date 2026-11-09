@@ -286,6 +286,7 @@ ul { margin: 0; }
   gap: 24px;
 }
 .card { display: flex; flex-direction: column; gap: 12px; padding: 28px; background: var(--off); border-radius: 14px; }
+.band--off .card { background: var(--paper); border: 1px solid var(--rule); }
 .card h3 { font-size: 20px; color: var(--navy); }
 .card ul { padding-left: 18px; font-size: 16px; display: flex; flex-direction: column; gap: 6px; }
 .inline-cta { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; font-size: 16px; }
