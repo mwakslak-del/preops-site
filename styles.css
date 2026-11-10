@@ -70,7 +70,11 @@ ul { margin: 0; }
   color: var(--navy);
   white-space: nowrap;
   text-decoration: none;
+  position: relative;
 }
+/* The ring-check stands in for the letter "o". This keeps the real letter in the page text
+   (for search engines and copy/paste) without showing it. */
+.logo-o { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .logo svg { height: 0.65em; width: 0.605em; flex: 0 0 auto; overflow: visible; }
 .logo .ring { stroke: var(--green); }
 .logo .check { stroke: var(--green); }
@@ -365,3 +369,8 @@ ul { margin: 0; }
 }
 .foot-legal a { font-weight: 400; }
 .foot-legal .links { display: flex; gap: 20px; }
+
+/* Privacy and Accessibility pages */
+.legal > * { max-width: 760px; }
+.legal h2 { font-size: 24px; margin-top: 16px; }
+.legal h2:first-child { margin-top: 0; }
