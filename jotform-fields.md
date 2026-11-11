@@ -2,7 +2,7 @@
 
 Mirrors the fax referral form (`referral-form.pdf`). Build it in this order; group headings become JotForm "Section Collapse" or "Heading" elements.
 
-**Form title:** Cardiac Preoperative Clearance — Referral
+**Form title:** Cardiac Preoperative Evaluation — Referral
 **Intro text:** For surgeons' offices. We call the patient to schedule. Questions? Call or text 818-724-8200.
 
 ## 1 · Referring office
@@ -12,7 +12,7 @@ Mirrors the fax referral form (`referral-form.pdf`). Build it in this order; gro
 | Surgeon | Short text | yes |
 | Scheduler / contact person | Short text | yes |
 | Office phone | Phone | yes |
-| Office fax (for the clearance letter) | Phone | yes |
+| Office fax (for the evaluation letter) | Phone | yes |
 | Direct line or extension | Short text | no |
 
 ## 2 · Patient
@@ -64,6 +64,6 @@ Checkboxes, in this order:
 Helper text under the upload fields: "No files? Fax them to 818-724-8300 and we'll match them to this referral."
 
 ## After submit
-Thank-you message: "Received. We'll call the patient to schedule, and your office will get the clearance letter, consult note, and any test reports by fax. Call or text 818-724-8200 with any questions."
+Thank-you message: "Received. We'll call the patient to schedule, and your office will get the evaluation letter, consult note, and any test reports by fax. Call or text 818-724-8200 with any questions."
 
 Notification: email to referrals@preops.com on each submission (HIPAA mode sends a secure link, not the contents).

@@ -1,10 +1,10 @@
 # The Preops Clinic
 
-> A dedicated cardiac preoperative clearance clinic in Tarzana, California (San Fernando Valley, Los Angeles). A service of Valley Heart and Rhythm Medical, Inc. Tagline: "Quality Without the Wait."
+> A dedicated cardiac preoperative evaluation clinic in Tarzana, California (San Fernando Valley, Los Angeles). A service of Valley Heart and Rhythm Medical, Inc. Tagline: "Quality Without the Wait."
 
 ## What the clinic does
 
-The Preops Clinic evaluates patients who need a cardiology assessment before noncardiac surgery. Surgeons' offices, urgent cares, and primary care physicians send a referral; the clinic calls the patient to schedule, performs the evaluation (history, exam, ECG) and arranges any needed cardiac testing (echocardiogram, treadmill stress test, or imaging stress test), then sends the clearance letter, the consult note, and the test reports to the surgeon's office by fax, with a copy to the primary care physician. If anything could affect the surgery date, the clinic calls the surgeon's office first.
+The Preops Clinic evaluates patients who need a cardiology assessment before noncardiac surgery. Surgeons' offices, urgent cares, and primary care physicians send a referral; the clinic calls the patient to schedule, performs the evaluation (history, exam, ECG) and arranges any needed cardiac testing (echocardiogram, treadmill stress test, or imaging stress test), then sends the evaluation letter, the consult note, and the test reports to the surgeon's office by fax, with a copy to the primary care physician. If anything could affect the surgery date, the clinic calls the surgeon's office first.
 
 Evaluations follow the 2024 ACC/AHA guideline for perioperative cardiovascular management for noncardiac surgery. Testing is ordered only when it would change the plan. The clinic is a preoperative service: patients are referred back to their usual care team (their referring physician and primary care physician) for ongoing care.
 
@@ -21,7 +21,7 @@ The clinic was started by Menachem Wakslak, MD, a board-certified cardiologist w
 
 ## For patients
 
-Bring a medication list, insurance card and photo ID, and any prior heart records. The clearance letter goes to the surgeon and the primary care doctor; patients are told exactly which medications to take or hold before surgery.
+Bring a medication list, insurance card and photo ID, and any prior heart records. The evaluation letter goes to the surgeon and the primary care doctor; patients are told exactly which medications to take or hold before surgery.
 
 ## Insurance
 
