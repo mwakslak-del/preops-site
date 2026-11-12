@@ -391,3 +391,7 @@ ul { margin: 0; }
 .guide-card { display: flex; flex-direction: column; gap: 12px; padding: 28px; background: var(--off); border-radius: 14px; text-decoration: none; color: inherit; border-top: 3px solid var(--green); }
 .guide-card h2 { font-size: 22px; }
 .guide-card span { font-weight: 700; color: var(--navy); margin-top: auto; }
+/* Keep blocks whole when a guide is printed or saved as PDF */
+.band--tight, .article-more, .article-note, .guide-card { break-inside: avoid; }
+.article h2 { break-after: avoid; }
+.article li, .article p { break-inside: avoid; }
