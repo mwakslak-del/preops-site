@@ -395,3 +395,5 @@ ul { margin: 0; }
 .band--tight, .article-more, .article-note, .guide-card { break-inside: avoid; }
 .article h2 { break-after: avoid; }
 .article li, .article p { break-inside: avoid; }
+
+.article-sources { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; }
