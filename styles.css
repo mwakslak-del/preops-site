@@ -396,9 +396,7 @@ ul { margin: 0; }
 .article h2 { break-after: avoid; }
 .article li, .article p { break-inside: avoid; }
 
-<<<<<<< HEAD
 .article-sources { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; }
-=======
 /* Guides block on the home page */
 .guides-teaser { display: flex; flex-direction: column; gap: 18px; padding-top: 28px; border-top: 1px solid var(--rule); }
 .guides-teaser-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
@@ -407,4 +405,3 @@ ul { margin: 0; }
 .guide-card--paper { background: var(--paper); }
 .guide-card h4 { margin: 0; font-size: 19px; line-height: 1.2; color: var(--navy); }
 .guide-card p { margin: 0; }
->>>>>>> main
