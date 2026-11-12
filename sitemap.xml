@@ -36,4 +36,20 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://www.preops.com/guides/</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.preops.com/guides/cardiac-evaluation-before-surgery.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.preops.com/guides/what-to-expect-preop-cardiac-visit.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.preops.com/guides/stress-test-before-surgery.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
 </urlset>
