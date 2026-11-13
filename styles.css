@@ -405,3 +405,6 @@ ul { margin: 0; }
 .guide-card--paper { background: var(--paper); }
 .guide-card h4 { margin: 0; font-size: 19px; line-height: 1.2; color: var(--navy); }
 .guide-card p { margin: 0; }
+.cite { font-size: 0.7em; line-height: 0; margin-left: 1px; }
+.cite a { text-decoration: none; font-weight: 600; }
+.article-sources li:target { background: var(--off); }
