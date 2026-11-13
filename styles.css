@@ -408,3 +408,4 @@ ul { margin: 0; }
 .cite { font-size: 0.7em; line-height: 0; margin-left: 1px; }
 .cite a { text-decoration: none; font-weight: 600; }
 .article-sources li:target { background: var(--off); }
+.guide-list { grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); }
