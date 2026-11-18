@@ -175,6 +175,39 @@ ul { margin: 0; }
 }
 .hero-copy { display: flex; flex-direction: column; gap: 24px; }
 .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* Two starting points: patients (green) and doctors' offices (navy) */
+.paths { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: 14px; }
+.path {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--navy);
+  border-radius: 14px;
+  padding: 20px;
+}
+.path--patient { border-top-color: var(--green); }
+.path-who { font-size: 20px; font-weight: 700; color: var(--navy); line-height: 1.2; }
+.path--patient .path-who { color: var(--green); }
+.path p { font-size: 15px; margin: 0; flex: 1; }
+.path .btn { width: 100%; }
+.path-more { font-size: 14px; font-weight: 600; color: var(--navy); text-align: center; }
+.btn-who { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85; }
+.nav-cta .btn { flex-direction: column; line-height: 1.15; padding: 4px 16px; }
+.nav-cta { gap: 10px; }
+.path-call { font-size: 14px; text-align: center; margin: 0; }
+.path-call a { color: var(--navy); font-weight: 700; white-space: nowrap; }
+.nav-phone { display: none; }
+.nav-links { gap: 18px; }
+@media (max-width: 760px) {
+  .nav-cta { width: 100%; display: grid; grid-template-columns: 1fr 1fr; }
+  .nav-cta .btn { padding: 4px 8px; }
+}
+.audience { align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--paper); background: var(--navy); border-radius: 999px; padding: 4px 12px; margin-bottom: 4px; }
+.patient-exit { font-size: 14px; text-align: center; border-top: 1px solid var(--rule); padding-top: 14px; margin: 0; }
+.patient-exit a { color: var(--green); font-weight: 700; }
 .cta-row .btn { flex: 1 1 auto; }
 
 /* Refer panel */
