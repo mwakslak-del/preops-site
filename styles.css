@@ -160,6 +160,7 @@ ul { margin: 0; }
 .band-navy h2, .band-navy h3 { color: var(--paper); }
 .band-navy p { color: var(--on-navy); }
 .band-navy a { color: var(--paper); }
+.band-navy a.btn--white, .band-navy a.btn--white:hover { color: var(--navy); }
 .band--rule-top { border-top: 3px solid var(--green); }
 .section-head { display: flex; flex-direction: column; gap: 10px; max-width: 680px; }
 .lede { font-size: 20px; max-width: 560px; }
@@ -189,15 +190,15 @@ ul { margin: 0; }
   padding: 20px;
 }
 .path--patient { border-top-color: var(--green); }
-.path-who { font-size: 20px; font-weight: 700; color: var(--navy); line-height: 1.2; }
+.path-who { font-size: 20px; font-weight: 700; color: var(--navy); line-height: 1.2; white-space: nowrap; }
 .path--patient .path-who { color: var(--green); }
-.path p { font-size: 15px; margin: 0; flex: 1; }
-.path .btn { width: 100%; }
+.path > p:not(.path-call) { font-size: 15px; margin: 0; flex: 1; }
+.path .btn { width: 100%; padding: 0 8px; font-size: 16px; white-space: nowrap; }
 .path-more { font-size: 14px; font-weight: 600; color: var(--navy); text-align: center; }
 .btn-who { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85; }
 .nav-cta .btn { flex-direction: column; line-height: 1.15; padding: 4px 16px; }
 .nav-cta { gap: 10px; }
-.path-call { font-size: 14px; text-align: center; margin: 0; }
+.path-call { font-size: 14px; text-align: center; margin: 0; flex: 0 0 auto; }
 .path-call a { color: var(--navy); font-weight: 700; white-space: nowrap; }
 .nav-phone { display: none; }
 .nav-links { gap: 18px; }
